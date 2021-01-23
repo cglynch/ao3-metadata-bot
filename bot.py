@@ -25,23 +25,12 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    print(message.content)
-    brooklyn_99_quotes = [
-        'I\'m the human form of the 💯 emoji.',
-        'Bingpot!',
-        (
-            'Cool. Cool cool cool cool cool cool cool, '
-            'no doubt no doubt no doubt no doubt.'
-        ),
-    ]
+
     url_section = "https://archiveofourown.org/works/"
     if url_section in message.content:
-        print("here " , message.content)
         id = utils.work_id_from_url(message.content)
-        print("ID = ", id)
         api = AO3()
         work = api.work(id=id)
-        print(work.warnings)
         output_list = [work.fandoms[0], work.warnings[0], work.rating[0]]
         response = " | ".join(output_list)
         await message.channel.send(response)
