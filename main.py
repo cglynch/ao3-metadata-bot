@@ -1,4 +1,4 @@
-# test_bot.py
+
 import os
 import utils
 from ao3 import AO3
@@ -35,4 +35,4 @@ async def on_message(message):
         response = " | ".join(output_list)
         await message.channel.send(response)
 
-client.run(TOKEN)
+bot.run(TOKEN)
