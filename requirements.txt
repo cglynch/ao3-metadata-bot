@@ -1,0 +1,2 @@
+ao3~=0.2.0
+python-dotenv~=0.15.0
