@@ -43,8 +43,7 @@ async def on_message(message):
         work = api.work(id=id)
         print(work.warnings)
         output_list = [work.fandoms[0], work.warnings[0], work.rating[0]]
-        response = " ".join(output_list)
-        # response = str(output_list)
+        response = " | ".join(output_list)
         await message.channel.send(response)
 
 client.run(TOKEN)
