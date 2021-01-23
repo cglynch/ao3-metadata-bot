@@ -1,5 +1,5 @@
 # test_bot.py
-import os, random
+import os
 import utils
 from ao3 import AO3
 import discord
