@@ -1,3 +1,4 @@
 ao3~=0.2.0
 python-dotenv~=0.15.0
 git+git://github.com/alexwlchan/ao3.git
+discord.py~=1.6.0
