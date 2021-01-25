@@ -30,9 +30,11 @@ async def on_message(message):
     if url_section in message.content:
         id = utils.work_id_from_url(message.content)
         api = AO3()
+        print("ID: "+id)
         work = api.work(id=id)
-        output_list = [work.fandoms[0], work.warnings[0], work.rating[0]]
-        response = " | ".join(output_list)
-        await message.channel.send(response)
-print("token:"+TOKEN)
+        print("work: " + str(work))
+        output_list = [" | ".join(work.fandoms), " | ".join(work.warnings), " | ".join(work.rating)]
+        response = " |-| ".join(output_list)
+        await message.channel.send(str(response))
+
 client.run(TOKEN)
