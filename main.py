@@ -35,4 +35,4 @@ async def on_message(message):
         response = " | ".join(output_list)
         await message.channel.send(response)
 
-bot.run(TOKEN)
+client.run(TOKEN)
