@@ -33,7 +33,7 @@ async def on_message(message):
         print("ID: "+id)
         work = api.work(id=id)
         print("work: " + str(work))
-        output_list = [" | ".join(work.fandoms), " | ".join(work.warnings), " | ".join(work.rating), "".join(work.author), work.words]
+        output_list = [" | ".join(work.fandoms), " | ".join(work.warnings), " | ".join(work.rating), "".join(work.author)]
         response = " |-| ".join(output_list)
         await message.channel.send(str(response))
 
