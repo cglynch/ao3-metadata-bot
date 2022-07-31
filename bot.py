@@ -31,7 +31,7 @@ async def on_message(message):
         id = utils.work_id_from_url(message.content)
         api = AO3()
         work = api.work(id=id)
-        output_list = [work.fandoms[0], work.warnings[0], work.rating[0]]
+        output_list = [work.fandoms[0], work.warnings[0], work.rating[0], work.words[0]]
         response = " | ".join(output_list)
         await message.channel.send(response)
 
